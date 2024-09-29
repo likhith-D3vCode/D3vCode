@@ -82,24 +82,6 @@
   border-radius: 10px;
 }
 
-/* Optional scroll bar customization (works in modern browsers) */
-.discription::-webkit-scrollbar {
-  width: 8px;
-}
-
-.discription::-webkit-scrollbar-thumb {
-  background-color: #007bff;
-  border-radius: 5px;
-}
-
-.discription::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-}
-
-.RightSideE{
-  background-color: #007bff;
-}
-
 .TotalContainer{
   display: flex;
   justify-content: space-between;
@@ -125,4 +107,53 @@
 /* Optional: Customize the button spacing, if needed */
 .SubTest button {
   margin-left: 10px;
+}
+
+.Facts-mainContainer{
+  display: flex;
+  /* background-color: blueviolet; */
+}
+.Facts-container{
+  min-height: 800px;
+  margin-left: 90px;
+  margin-right: 20%;
+  margin-top: 6%;
+  /* background-color: #007bff; */
+}
+
+.facts-card{
+
+  margin-left: 7%;
+  
+}
+
+.course-suggested-card{
+
+  margin-top: 120px;
+
+}
+
+
+
+
+
+.Facts-container1{
+  display: flex;
+  min-width: 100%;
+  gap: 22px;
+  /* background-color: #007bff; */
+ 
+  min-height: 900px;
+}
+
+.Facts-leftSide{
+  width: 50%;
+  margin-left: 60px;
+  /* background-color: aqua; */
+}
+
+.Facts-rightSide{
+  width: 40%;
+  margin-right: 40px;
+  /* background-color: aquamarine; */
 }

@@ -15,9 +15,6 @@ function NavBar(){
        <li><a href="#" className="nav-link px-2 text-white">Discussion</a></li>
        <li><a href="#" className="nav-link px-2 text-white">Assessemts</a></li>
      </ul>
-
-    
-
      <div className="text-end">
        <button type="button" className="btn btn-outline-light me-2">Login</button>
        <button type="button" className="btn btn-warning">Sign-up</button>
