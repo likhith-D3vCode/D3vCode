@@ -10,9 +10,10 @@ function NavBar(){
 
      <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
        <li><a href="#" className="nav-link px-2 text-white">Study</a></li>
-       <li><a href="#" className="nav-link px-2 text-white">Event</a></li>
        <li><a href="#" className="nav-link px-2 text-white">Labs</a></li>
-       <li><a href="#" className="nav-link px-2 text-white">About</a></li>
+       <li><a href="#" className="nav-link px-2 text-white">Events</a></li>
+       <li><a href="#" className="nav-link px-2 text-white">Discussion</a></li>
+       <li><a href="#" className="nav-link px-2 text-white">Assessemts</a></li>
      </ul>
 
     
