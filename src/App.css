@@ -1,0 +1,128 @@
+
+.imgcard{
+  border-radius: 10px;
+  margin-top: 120px;
+  margin-left: 60px;
+  box-shadow: 2px 2px 2px 2px hsla(0, 12%, 5%, 0.384);
+}
+
+.wellcomeText{
+   margin-top: 50px;
+   margin-left: 40px;
+   padding: 0;
+}
+.Playbtn{
+  display: flex;
+  align-items: center;
+  gap: 59px;
+
+}
+.Playbtn button{
+  border-radius: 5px;
+  border: none;
+  width: 3rem;
+}
+.Playbtn button i{
+  width: 100%;
+}
+
+.category{
+  display: flex;
+  margin: 90px;
+  gap: 40px;
+} 
+
+.number{
+  padding: 6px;
+  text-align: center;
+  background-color: rgb(227, 232, 238);
+  border-radius: 20%;
+  font-size: 0.6rem;
+  color: rgb(62, 60, 60);
+}
+
+.TopContainer{
+   margin-top: 50px;
+   display: flex;
+
+}
+
+.Topcls{
+   display: flex;
+   width: 100%;
+   gap: 70px;
+
+}
+.Topcls p button{
+  margin: 10px;
+  border: none;
+  border-radius: 40%;
+}
+
+.Topcls p {
+  font-weight: bold;
+}
+
+.discription{
+  max-width: 100%;
+  background-color: rgb(255, 255, 255);
+  width: 45%;
+  height: 88%;
+  margin-left: 4rem;
+}
+
+/* Scrollable description section */
+.discription {
+  max-height: 800px; /* Set a fixed height for the description */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Optional scroll bar customization (works in modern browsers) */
+.discription::-webkit-scrollbar {
+  width: 8px;
+}
+
+.discription::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.discription::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.RightSideE{
+  background-color: #007bff;
+}
+
+.TotalContainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightSideE{
+  width: 53%;
+  margin-top: 20px;
+  max-height: 800px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.SubTest {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Vertically center the elements */
+  gap: 600px; /* Space between the heading and button */
+  padding-right: 20px; /* Optional: additional padding on the right side */
+}
+
+/* Optional: Customize the button spacing, if needed */
+.SubTest button {
+  margin-left: 10px;
+}
