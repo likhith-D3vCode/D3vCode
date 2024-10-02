@@ -157,3 +157,161 @@
   margin-right: 40px;
   /* background-color: aquamarine; */
 }
+
+/* App.css */
+
+/* Navbar Brand Customization */
+.navbar-brand {
+  font-weight: bold;
+}
+
+/* Navbar Link Customization */
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffcc00; /* Change to your desired hover color */
+}
+
+/* Button Customization */
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.5); /* Optional: customize border color */
+}
+
+/* Spacing below the navbar */
+header {
+  margin-bottom: 20px;
+}
+
+/* Media Queries for Additional Custom Styles (if needed) */
+@media (max-width: 768px) {
+  .navbar {/* NavBar.css */
+    .navbar {
+      transition: background-color 0.3s; /* Smooth transition for background */
+    }
+    
+    .navbar-toggler {
+      border: none; /* Remove border from the toggler */
+    }
+    
+  
+    
+    text-align: left; /* Center text on mobile */
+  }
+}
+/* NavBar.css */
+
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+.nav-link {
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.nav-link:hover {
+  color: #ffc107; /* Change link color on hover */
+  text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+.btn {
+  border-radius: 20px; /* Rounded buttons for a modern look */
+}
+
+.btn-warning {
+  background-color: #ffc107; /* Bootstrap warning color */
+  border-color: #ffc107; /* Ensure border matches background */
+}
+
+.btn-warning:hover {
+  background-color: #e0a800; /* Darker shade on hover */
+}
+
+.nav-item {
+  margin-right: 30px; /* Adjust spacing as needed */
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    margin-top: 10px; /* Space above nav items on mobile */
+  }
+
+  .nav-item {
+    margin-right: 0; /* Reset margin for mobile */
+  }
+}
+/* CSS for hover effect on like button */
+/* CSS for hover effect on like button */
+.like-icon {
+  transition: transform 0.2s ease;
+}
+
+.like-icon:hover {
+  transform: scale(1.2); /* Zoom effect */
+}
+
+/* Liked state color */
+.liked {
+  color: gold;
+}
+
+/* CSS for comment and view comments */
+.comment-icon {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.comment-icon:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.comment-icon span {
+  transition: color 0.2s ease;
+}
+
+.comment-icon:hover span {
+  color: #007bff; /* Change text color on hover */
+}
+
+.view-comments {
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.view-comments:hover {
+  text-decoration: underline;
+}
+
+/* Submit icon styling */
+.submit-icon {
+  cursor: pointer;
+  color: #007bff;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.submit-icon:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Comment input container */
+.comment-input-container {
+  position: relative;
+}
+
+/* Comment textarea styling */
+.comment-textarea {
+  padding-right: 35px; /* Add padding to make space for the submit icon */
+  resize: none; /* Disable resizing */
+}
+
+/* Comment styling */
+.comment {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 5px;
+  border-radius: 5px;
+}

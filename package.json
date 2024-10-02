@@ -16,6 +16,7 @@
     "@codemirror/lang-javascript": "^6.2.2",
     "@codemirror/state": "^6.4.1",
     "@codemirror/view": "^6.33.0",
+    "@popperjs/core": "^2.11.8",
     "@uiw/react-codemirror": "^4.23.3",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
