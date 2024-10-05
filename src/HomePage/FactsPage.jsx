@@ -1,6 +1,9 @@
 import { useState } from "react";
-import { FaUserCircle, FaThumbsUp, FaCommentAlt, FaPaperPlane } from "react-icons/fa"; // Import icons from FontAwesome
+import { FaUserCircle, FaThumbsUp, FaCommentAlt, FaPaperPlane, FaTrophy, FaMedal, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"; // Added social media icons
 import "bootstrap/dist/css/bootstrap.min.css";
+import expressImage from "../images/express.webp";
+import react from '../images/react.webp'; // Adjust the path if necessary
+import node from '../images/node.webp';
 
 function FactsPage() {
   const facts = Array(4).fill({
@@ -28,7 +31,6 @@ function FactsPage() {
   const handleSubmitComment = (index, e) => {
     e.preventDefault();
     if (commentData[index].comment.trim() !== "") {
-      console.log("Comment submitted for Fact", index + 1, ": ", commentData[index].comment);
       setCommentData((prev) =>
         prev.map((data, idx) =>
           idx === index
@@ -61,7 +63,7 @@ function FactsPage() {
             <div className="mb-3">
               {/* Card Component */}
               {facts.map((fact, index) => (
-                <div className="card mb-3 shadow-sm" key={index} style={{ borderLeft: "none", borderRight: "none" }}>
+                <div className="card mb-3 shadow-sm card-fact" key={index}>
                   <div className="card-body">
                     <div className="d-flex align-items-center mb-3">
                       {/* User icon */}
@@ -74,19 +76,11 @@ function FactsPage() {
 
                     {/* Like and Comment icons */}
                     <div className="d-flex justify-content-between align-items-center mt-4">
-                      <div
-                        className="like-comment"
-                        onClick={() => handleLikeClick(index)}
-                      >
-                        <FaThumbsUp
-                          className={`like-icon me-2 ${commentData[index].liked ? "liked" : ""}`}
-                        />
+                      <div className="like-comment" onClick={() => handleLikeClick(index)}>
+                        <FaThumbsUp className={`like-icon me-2 ${commentData[index].liked ? "liked" : ""}`} />
                         <span>Like</span>
                       </div>
-                      <div
-                        onClick={() => handleCommentClick(index)}
-                        className="comment-icon"
-                      >
+                      <div onClick={() => handleCommentClick(index)} className="comment-icon">
                         <FaCommentAlt className="me-2" />
                         <span>Comment</span>
                       </div>
@@ -95,10 +89,7 @@ function FactsPage() {
                     {/* View Comments */}
                     {commentData[index].comments.length > 0 && (
                       <div className="mt-3">
-                        <span
-                          onClick={() => handleCommentClick(index)}
-                          className="view-comments"
-                        >
+                        <span onClick={() => handleCommentClick(index)} className="view-comments">
                           {commentData[index].showComment
                             ? "Hide Comments"
                             : `View Comments (${commentData[index].comments.length})`}
@@ -138,43 +129,90 @@ function FactsPage() {
               ))}
             </div>
           </div>
+
           {/* Right Side Page */}
           <div className="col-md-4">
-            <div className="course-suggested-card">
-              <div className="card text-bg-light mb-3">
-                <div className="card-header">Express</div>
-                <div className="card-body">
-                  <h5 className="card-title">Lorem ipsum dolor sit amet.</h5>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Ut, ipsam.
-                  </p>
+            {/* Add the contest texts with icons */}
+            <div className="contest-container mb-2">
+              <div
+                className="d-flex align-items-center contest-item mb-2"
+                onClick={() => window.open("https://example.com/biweekly-contest", "_blank")}
+              >
+                <FaTrophy className="contest-icon me-2" />
+                <div className="contest-text">
+                  In 7 days: <br />
+                  Join our Biweekly Contest 141
                 </div>
               </div>
-              <div className="card text-bg-light mb-3">
-                <div className="card-header">Angular</div>
-                <div className="card-body">
-                  <h5 className="card-title">Lorem ipsum dolor sit amet.</h5>
-                  <p className="card-text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Fugiat, commodi!
-                  </p>
-                </div>
-              </div>
-              <div className="card text-bg-light mb-3">
-                <div className="card-header">Node.js</div>
-                <div className="card-body">
-                  <h5 className="card-title">Lorem ipsum dolor sit amet.</h5>
-                  <p className="card-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Ducimus, et!
-                  </p>
+              <div
+                className="d-flex align-items-center contest-item"
+                onClick={() => window.open("https://example.com/weekly-contest", "_blank")}
+              >
+                <FaMedal className="contest-icon me-2" />
+                <div className="contest-text">
+                  In 16 hours: <br />
+                  Join our Weekly Contest 418
                 </div>
               </div>
             </div>
-          </div>
+
+            {/* Right-side cards displayed one by one with increased height and button */}
+            {/* Right-side cards displayed one by one with increased height and button */}
+<div className="course-suggested-card mt-3">
+  <div
+    className="card right-card text-bg-light mb-3"
+    style={{ backgroundImage: `url(${expressImage})` }}
+  >
+    <a href="#" className="btn card-btn">
+      Go to course
+    </a>
+  </div>
+
+  <div
+    className="card right-card text-bg-light mb-3"
+    style={{ backgroundImage: `url(${react})` }}
+  >
+    <a href="#" className="btn card-btn">
+      Go to course
+    </a>
+  </div>
+
+  <div
+    className="card right-card text-bg-light mb-3"
+    style={{ backgroundImage: `url(${node})` }}
+  >
+    <a href="#" className="btn card-btn">
+      Go to course
+    </a>
+  </div>
+</div>
+</div>
         </div>
       </div>
+
+      {/* Footer Section */}
+      <footer className="bg-dark text-white text-center p-4 mt-4">
+        <div className="container">
+          <h5 className="mb-3">About Us</h5>
+          <p className="mb-4">We are dedicated to providing the best web development resources and tutorials.</p>
+          <div className="social-icons mb-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FaInstagram size={30} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FaTwitter size={30} />
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FaYoutube size={30} />
+            </a>
+          </div>
+          <p className="mb-0">© 2024 D3vCode. All Rights Reserved.</p>
+          <p>
+            <a href="/privacy-policy" className="text-white">Privacy Policy</a> | 
+            <a href="/terms-of-service" className="text-white"> Terms of Service</a>
+          </p>
+        </div>
+      </footer>
     </>
   );
 }

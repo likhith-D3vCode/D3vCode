@@ -133,10 +133,6 @@
 
 }
 
-
-
-
-
 .Facts-container1{
   display: flex;
   min-width: 100%;
@@ -162,22 +158,52 @@
 
 /* Navbar Brand Customization */
 .navbar-brand {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Set the color for the brand name */
   font-weight: bold;
 }
 
-/* Navbar Link Customization */
-.nav-link {
-  transition: color 0.3s ease;
+.navbar-brand:hover {
+  text-decoration: none; /* Ensure no underline on hover */
+  color: #ffdd57; /* Optional: Change color on hover */
+  
+}
+.navlinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-link:hover {
-  color: #ffcc00; /* Change to your desired hover color */
+.navlinks li {
+  margin: 0 20px;
 }
 
-/* Button Customization */
-.btn-outline-light {
-  border-color: rgba(255, 255, 255, 0.5); /* Optional: customize border color */
+.navlinks li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s linear 0s;
+  border-bottom: 2px solid transparent; /* Reserve space for the border */
 }
+
+.navlinks li a:hover {
+  color: #7ebcb9;
+  border-bottom: 2px solid #7ebcb9; /* Change the color of the existing border on hover */
+}
+
+@media (max-width: 992px) {
+  .navlinks {
+    float: none;
+    padding-left: 0;
+  }
+
+  .navlinks li {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+  }
+}
+
 
 /* Spacing below the navbar */
 header {
@@ -200,20 +226,6 @@ header {
     text-align: left; /* Center text on mobile */
   }
 }
-/* NavBar.css */
-
-.navbar {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-}
-
-.nav-link {
-  transition: color 0.3s ease; /* Smooth color transition on hover */
-}
-
-.nav-link:hover {
-  color: #ffc107; /* Change link color on hover */
-  text-decoration: underline; /* Underline on hover for emphasis */
-}
 
 .btn {
   border-radius: 20px; /* Rounded buttons for a modern look */
@@ -222,6 +234,7 @@ header {
 .btn-warning {
   background-color: #ffc107; /* Bootstrap warning color */
   border-color: #ffc107; /* Ensure border matches background */
+  
 }
 
 .btn-warning:hover {
@@ -314,4 +327,162 @@ header {
   background-color: #f8f9fa;
   padding: 5px;
   border-radius: 5px;
+}
+
+.right-card {
+  position: relative;
+  overflow: hidden;
+  height: 220px; /* Adjust height as needed */
+}
+
+.card-btn {
+  position: relative;
+  z-index: 2; /* Ensure button is on top */
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-decoration: none; /* Prevent underline */
+}
+
+.card-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  text-decoration: none; /* Prevent underline on hover */
+}
+
+/* Mirrored effect for the card button */
+.card-btn::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Position it below the button */
+  left: 0;
+  right: 0;
+  height: 100%; /* Match the height */
+  background-color: rgba(0, 123, 255, 0.2); /* Semi-transparent background to simulate reflection */
+  transform: scaleY(-1); /* Flip vertically */
+  z-index: 1; /* Place behind the button */
+  opacity: 0.5; /* Optional: Make it semi-transparent */
+  transition: opacity 0.3s; /* Transition for opacity */
+}
+
+.card-btn:hover::after {
+  opacity: 0.8; /* Increase opacity on hover */
+}
+
+.contest-container {
+  margin-bottom: 15px; /* Space between contest text and cards */
+}
+.card-fact {
+  border-left: none;
+  border-right: none;
+}
+
+.contest-container {
+  padding: 5px 0;
+}
+
+.contest-item {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contest-icon {
+  font-size: 1.5rem;
+}
+
+.contest-text {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.right-card {
+  background-size: cover;
+  min-height: 230px;
+  position: relative;
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.comment-input-container {
+  position: relative;
+}
+
+.submit-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.view-comments {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.like-icon {
+  cursor: pointer;
+}
+
+
+
+
+
+.contest-item {
+  cursor: pointer; /* Pointer cursor for clickable items */
+  color: #007bff; /* Color for the text */
+  font-size: 1.2rem; /* Slightly larger font size */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.contest-item:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+.contest-icon {
+  color: #f39c12; /* Color for the trophy and medal icons */
+  font-size: 1.5rem; /* Increase the size of icons */
+}
+footer {
+  background-color: #343a40; /* Dark background */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  margin: 0 15px;
+  color: white; /* Icon color */
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #ffdd57; /* Change to a colorful shade on hover */
+}
+
+h5 {
+  color: #ffdd57; /* Header color */
+}
+
+a {
+  color: #ffdd57; /* Link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
 }
