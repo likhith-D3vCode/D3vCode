@@ -6,8 +6,9 @@ import NavBar from "./HomePage/NavBar"
 import FactsPage from "./HomePage/FactsPage"
 import CompilerFrame from "./Frame-Work-Compiler/CompilerFrameWork";
 import PracticePage from "./Labs/PracticePage";
+import WebCompiler from "./Web_Basic-Compiler/Web-Compiler";
 // import Category from "./Labs/Category"
-// import Questions from "./Labs/Questions"
+ import Questions from "./Labs/Questions"
 // import PracticePage from "./Labs/PracticePage"
 
 function App() {
@@ -21,11 +22,14 @@ function App() {
     {/* <NavBar/> for comment the code ctrl+a then ctrl+/
     <StartText/>
     <CourseCard/> */}
-    {/* <Category/>
-    <Questions/> */} 
-    {/* <PracticePage/> */}
+    {/* <Category/>  */}
 
-   <PracticePage/>
+    <Questions/> 
+   
+
+    {/* <PracticePage/>  */}
+
+  
 
     </>
        

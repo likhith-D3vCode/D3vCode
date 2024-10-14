@@ -1,8 +1,10 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import CompilerFrame from '../Frame-Work-Compiler/CompilerFrameWork';
+import WebCompiler from '../Web_Basic-Compiler/Web-Compiler';
+import { useState } from "react";
 
 function PracticePage(){
-
+    const [activeComponent, setActiveComponent] = useState("framework");
     return <>
     <div className="container TopContainer">
         <div className="Topcls">
@@ -53,9 +55,19 @@ function PracticePage(){
          </div>
     </div>
     <div className="rightSideE">
+      {/* Buttons to switch between components */}
+      <div className="button-container">
+        <button onClick={() => setActiveComponent("framework")}>
+          Framework
+        </button>
+        <button onClick={() => setActiveComponent("html/css/js")}>
+          HTML/CSS/JS
+        </button>
+      </div>
 
-        <CompilerFrame/>
-        
+      {/* Conditionally render the components based on activeComponent */}
+      {activeComponent === "framework" && <CompilerFrame />}
+      {activeComponent === "html/css/js" && <WebCompiler />}
     </div>
     
  
