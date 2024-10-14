@@ -111,7 +111,7 @@ function CompilerFrame() {
           <Terminal />
           </div>
       </div>
-  )
+  ) 
   
 }
 
